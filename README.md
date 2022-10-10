@@ -9,22 +9,35 @@ freeCodeCamp.org offers several developer certifications. Each of these certific
 Each of these 30 projects in the freeCodeCamp.org curriculum has its own agile user stories and automated tests. These help users build up project incrementally and ensure fulfillment of all the user stories before submission.
 
 ## Python Expert Roadmap 
-   Certifications with my completion status:-
+   Certifications with my completion status and progess:
 
 
- ### **Scientific Computing with Python** :heavy_check_mark: 
+ ### **Scientific Computing with Python** ❌
 
-* [x] [Basic HTML and HTML5](https://github.com/yadavanuj1996/freecodecamp-solutions/tree/master/Responsive%20Web%20Design%20Certification)
-* [x] [Basic CSS](https://github.com/yadavanuj1996/freecodecamp-solutions/tree/master/Responsive%20Web%20Design%20Certification)
-
-
- ### **Data Analysis with Python** :heavy_check_mark: 
-
-* [x] [Basic HTML and HTML5](https://github.com/yadavanuj1996/freecodecamp-solutions/tree/master/Responsive%20Web%20Design%20Certification)
-* [x] [Basic CSS](https://github.com/yadavanuj1996/freecodecamp-solutions/tree/master/Responsive%20Web%20Design%20Certification)
+* [ ] [Python for Everybody]
+* [ ] [Project 1: Arithmetic Formatter]
+* [ ] [Project 2: Time Calculator]
+* [ ] [Project 3: Budget App]
+* [ ] [Project 4: Polygon Area Calculator]
+* [ ] [Project 5: Probability Calculator]
 
 
- ### **Machine Learning with Python** :heavy_check_mark: 
+ ### **Data Analysis with Python** ✖️
 
-* [x] [Basic HTML and HTML5](https://github.com/yadavanuj1996/freecodecamp-solutions/tree/master/Responsive%20Web%20Design%20Certification)
-* [x] [Basic CSS](https://github.com/yadavanuj1996/freecodecamp-solutions/tree/master/Responsive%20Web%20Design%20Certification)
+* [ ] [Data Analysis]
+* [ ] [Numpy]
+* [ ] [Project 1: Mean-Variance-Standard Deviation Calculator]
+* [ ] [Project 2: Demographic Data Analyzer]
+* [ ] [Project 3: Medical Data Visualizer]
+* [ ] [Project 4: Page View Time Series Visualizer]
+* [ ] [Project 5: Sea Level Predictor]
+
+ ### **Machine Learning with Python** ❌
+
+* [ ] [Tensorflow]
+* [ ] [How Neural Networks Work]
+* [ ] [Project 1: Rock Paper Scissors]
+* [ ] [Project 2: Cat and Dog Image Classifier]
+* [ ] [Project 3: Book Recommendation Engine using KNN]
+* [ ] [Project 4: Linear Regression Health Costs Calculator]
+* [ ] [Project 5: Neural Network SMS Text Classifier]
