@@ -17,15 +17,23 @@ finally, continue, nonlocal, with, yield.
 < less than, <= less than or equal to, > greater than, 
 == equal to, != not equal
 ```
-5. **Type**: intiger(int), float, or string(str). Can only combine things of the same type. You can ask python which type a variable is. You can convert between different types. Divition will always result in a floating type. 
+5. **Type**: intiger(int), float, string(str), Boolean, or none. Can only combine things of the same type. You can ask python which type a variable is. You can convert between different types. Divition will always result in a floating type. 
 6. **Indentation**: very important for if/while statements. You will get an error if the indentation is not correct. You cannot replace tabs for spaces. There is no 'end' command as in Matlab, so the indentation is how Python knows to exit a loop
 7. **Try/except Structure** = If you know there is a line of code which will most likely give back an error, sorround it in a try/except loop. If the try works, except is skipped. If try fails, except is run. Normally the error would stop the entie code, but this allows the rest of the code to continue running. 
 8. **Functions**: Coders dont like to retype the same thing twice. This is for ease of debugging or changing. If you find something wrong in one place you now need to go find it 10 more times unless it is saved as a function. `def` creates, names, and records the function. To run the code you later call it by name(). It is best practice to output functions with return() command instead of print().
 9. **Arguments** = value passed into the function as an input when you call the function
 10. **Parameters** = a variable used in the function definition
-11. **Pyhon commands**: 
+11. **Pyhon operators**: 
 ```
-break = stops the exicution of a loop
+break = stops the exicution of a loop (for or while)
 return = stops the exicution of a function and speecifies output
+continue = ends the current iteration and jumps to the top of the loop
+in = cycles through each of the variable in a set, useful in for loops
+is = logical operator. Similar to the '==' but stronger since it requires the variables to be the same type. Ex: 0==0.0 is true but 0 is 0.0 is false.
+is not = logical operator. Opposite of the is operator.
 ```
-12. 
+12. **Loops** = Make sure to avoid infinite loops, they will drain all processing power. You can break out of them with 'break' command. While loops are indefinite, for loops are definite.
+13. **Boolean Variables** = the variables True and False only. Starts at False and is set to True once we find what we are looking for.
+14. **None type** = only has one variable (empty, NA, nothing). It is a placeholder.
+15. **Strings**: are indexed with a starting value of 0 (Ex: banana would be assigned 012345)
+16. [Built in functions](https://docs.python.org/3/library/functions.html)
