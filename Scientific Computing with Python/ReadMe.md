@@ -37,3 +37,6 @@ is not = logical operator. Opposite of the is operator.
 14. **None type** = only has one variable (empty, NA, nothing). It is a placeholder.
 15. **Strings**: are indexed with a starting value of 0 (Ex: banana would be assigned 012345)
 16. [Built in functions](https://docs.python.org/3/library/functions.html)
+17. **Spicing Strings**: variable[0:4] would be from the first letter to the third since it is 'up to but not including 4'. If the variable is only 2 letters long it will still accept 4 as an input, it'll just truncate it where it ends. 
+18. **String Library**: special functions for interfacing with string types. If you have a string named x, the command dir(x) will show all strings interface commands able to be used. [Link](https://docs.python.org/3/library/stdtypes.html#string-methods)
+19. 
