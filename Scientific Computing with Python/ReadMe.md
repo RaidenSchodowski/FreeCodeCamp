@@ -53,3 +53,21 @@ Mode = r if reading the file, w if writing to the file. This is optional
 25. [List functions](http://docs.python.org/tutorial/datastructures.html)
 26. **Append** = adding elements to the end of an existing list 
 27. **Dictionaries** = A type of collection. A "bag" of values, each with its own label. Everything has a key, but there is no order. Lists stay in order and you can retrieve them by number. They are Pythons most powerful data collection. 
+28. **List Comprehension**: Pythons ability to generate a list instead of be given the list values directly. 
+29. **Expressions** = searching for information, very old very well used. Must initieate it by using `import.re` at the beginnging. `re.search()` checks if a string matchs a regular expression like the find command, returns true/false only. `re.findall`extracts portions of a string that match the regular expression.
+```
+^        Matches the beginning of a line
+$        Matches the end of the line
+.        Matches any character
+\s       Matches whitespace
+\S       Matches any non-whitespace character
+*        Repeats a character zero or more times
+*?       Repeats a character zero or more times (non-greedy)
++        Repeats a character one or more times
++?       Repeats a character one or more times (non-greedy)
+[aeiou]  Matches a single character in the listed set
+[^XYZ]   Matches a single character not in the listed set
+[a-z0-9] The set of characters can include a range
+(        Indicates where string extraction is to start
+)        Indicates where string extraction is to end
+```
