@@ -42,8 +42,14 @@ is not = logical operator. Opposite of the is operator.
 18. **String Library**: special functions for interfacing with string types. If you have a string named x, the command dir(x) will show all strings interface commands able to be used. [Link](https://docs.python.org/3/library/stdtypes.html#string-methods)
 19. **Files** 
 ```
-x = open(filename,mode) reads the file and assigns to variable x. filename must include 
-.txt extension and is a 'string'
+x = open(filename,mode) reads the file and assigns to variable x. filename must include .txt 
+extension and is a 'string'
 Mode = r if reading the file, w if writing to the file. This is optional
 ```
 21. **New line**: \n character. It is hidden in most cases but must be included in your count so remember it is there. 
+22. **Collection**: Allows you to put many values in a single variable
+23. **Mutable** = changable. Lists are mutable, strings are not. 
+24. **Range** = returns a list of numbers that range from zero to one less then the parameter it is set to 
+25. [List functions](http://docs.python.org/tutorial/datastructures.html)
+26. **Append** = adding elements to the end of an existing list 
+27. **Dictionaries** = A type of collection. A "bag" of values, each with its own label. Everything has a key, but there is no order. Lists stay in order and you can retrieve them by number. They are Pythons most powerful data collection. 
