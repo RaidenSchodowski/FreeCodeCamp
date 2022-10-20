@@ -1,5 +1,3 @@
-# Basics
-
 1. **Reserved Words** = words you cannot use as variable names
 ```
 False, None, True, and, as, assert, break, class, if, def, del, elif, else, except, 
@@ -80,11 +78,11 @@ $        Matches the end of the line
 ```
 Tags          indicate the beginning and ending of elements
 Attributes    keyword/value pairs on the opening tag of XML
-Serialize     Convert data in one program into a common format that can be stored/transmitted
+Serialize     Convert data in one program into a common format that can be 
+              stored/transmitted
 XML Format    Every start tag neesd an end tag
 ```
 36. **XML Schema**: description of legal format of XML document to specify a "contract" between systems. XML and XML Schema are both passed through a validator to make sure it is legal. [link](http://en.wikipedia.org/wiki/Xml_schema)
-
-
-
-I can watch 4 lectures in 30 min = 8 lectues per hour
+37. **JSON**: Better for pulling data and moving it, as opposed to XML is better for heirarchical structure. Born from Javascript. Not an international standard. [Link](https://www.json.org/json-en.html). Returns everything as a dictionary or list depending on how you format it. Retrieval request is written in one large string. 
+38. **Service Oriented Approach**: for dealing with information that is spread across multiple locations. [explinations]
+39. **API**: Application Program Interface = documentation for different websites that lays out the rules of how to use it. 
