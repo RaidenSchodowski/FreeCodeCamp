@@ -87,5 +87,4 @@ XML Format    Every start tag neesd an end tag
 
 
 
-in 3 min i can do 4 lectures = 8 lectues per hour
-33-
+I can watch 4 lectures in 30 min = 8 lectues per hour
