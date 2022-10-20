@@ -1,0 +1,4 @@
+This file is a test to see if this actually works. 
+I am going to open this .txt file in python for lectures 
+17 and onwards. And try to manipulate the information
+once in python. Lets see how it goes!
