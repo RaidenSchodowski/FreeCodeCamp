@@ -86,3 +86,23 @@ XML Format    Every start tag neesd an end tag
 37. **JSON**: Better for pulling data and moving it, as opposed to XML is better for heirarchical structure. Born from Javascript. Not an international standard. [Link](https://www.json.org/json-en.html). Returns everything as a dictionary or list depending on how you format it. Retrieval request is written in one large string. 
 38. **Service Oriented Approach**: for dealing with information that is spread across multiple locations. [explinations]
 39. **API**: Application Program Interface = documentation for different websites that lays out the rules of how to use it. 
+40. **Objects**: instead of being the whole program - each object is a little "island" within the program and cooperatively works together. Approach is to break the problem into smaller understandable parts. Have boundaries that allow us to ignore un-needed detail. 
+41. **Class** = a template or key for an object you are going to make. A more abstract concept. 
+42. **Method** = function that lives inside of the class / a defined capability of a class
+43. **Field or attribute** = a bit of data in a class 
+44. **Object/Instance** = a particular instance of a class. Many objects from one class
+45. **Object Lifestyle**  = act of creating (constructor) and destroying (destructor) objects. Constructors are used more more often than destructors. Constructurs set up initial variables, etc. 
+46. **Inheritance** = instead of making a new class from scratch we are startig from an existing class, branching off of it essentially. Creates object heirarchies. Called Parent-Child relationships or subclassing
+47. **Database* = contains many tables
+48. **Relation/table** = contains tuples and attributes
+49. **Tuple/row** = a set of fields that generally represents an object like a person or a music track
+50. **Attribute/column** = one of possibly many elements of data corresponding to the object represented by the row
+51. **SQL** = structures query language is the language we use to issue commands to the data base. creates a table, retrieve some data, insert data, delete data, etc.
+```
+Common database systems:
+Oracle    Large, commercial, enterprise-scale, very tweakable
+MySql     Simpler but very fast and scalable - commercial open source 
+Sqlserver Very nice, from microsoft
+HSQL, SQLite, Postgress, etc are all smaller projects that are free and open source
+```
+52. [SQL code](https://www.py4e.com/lectures3/Pythonlearn-15-Database-Handout.txt)
