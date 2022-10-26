@@ -14,7 +14,7 @@ Each of these 30 projects in the freeCodeCamp.org curriculum has its own agile u
 
  ### **Scientific Computing with Python** ✖️
 
-* [ ] Python for Everybody
+* [x] Python for Everybody
 * [ ] Project 1: Arithmetic Formatter
 * [ ] Project 2: Time Calculator
 * [ ] Project 3: Budget App
