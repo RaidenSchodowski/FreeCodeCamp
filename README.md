@@ -16,10 +16,10 @@ Each of these 30 projects in the freeCodeCamp.org curriculum has its own agile u
 
 * [x] Python for Everybody
 * [x] Project 1: Arithmetic Formatter
-* [ ] Project 2: Time Calculator
-* [ ] Project 3: Budget App
-* [ ] Project 4: Polygon Area Calculator
-* [ ] Project 5: Probability Calculator
+* [x] Project 2: Time Calculator
+* [x] Project 3: Budget App
+* [x] Project 4: Polygon Area Calculator
+* [x] Project 5: Probability Calculator
 
 
  ### **Data Analysis with Python** ✖️
