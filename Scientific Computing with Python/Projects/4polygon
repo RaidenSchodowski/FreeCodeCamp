@@ -1,0 +1,94 @@
+class Rectangle:
+    
+    # Initialise object
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
+        
+    # This will be shown when object is accessed via print()    
+    def __str__(self):
+        to_print = "Rectangle(width=" + str(self.width) + ", height=" + str(self.height) + ")"
+        return to_print
+    
+    # This will be shown when object is executed in command line
+    def __repr__(self):
+        to_display = "Rectangle(width=" + str(self.width) + ", height=" + str(self.height) + ")"
+        return to_display
+
+    
+    
+    
+    def set_width(self, new_width):
+        self.width = new_width
+    
+    
+    def set_height(self, new_height):
+        self.height = new_height
+    
+    
+    def get_area(self):
+        area = self.width * self.height
+        return area
+    
+    def get_perimeter(self):
+        perimeter = 2 * self.width + 2 * self.height
+        return perimeter
+    
+    
+    def get_diagonal(self):
+        diagonal = (self.width ** 2 + self.height ** 2) ** .5
+        return diagonal
+    
+    
+    def get_picture(self):
+        picture = ""
+        if self.width > 50 or self.height > 50:
+            picture = "Too big for picture."
+        else:
+            for no_ln in range(int(self.height)):
+                picture += "*" * self.width + "\n"
+        
+        return picture
+    
+    
+    def get_amount_inside(self, new_obj):
+        
+        num_width = int(self.width / new_obj.width)
+        num_height = int(self.height / new_obj.height)
+        
+        num = num_width * num_height          
+        
+        return num
+
+    
+
+class Square(Rectangle):
+    
+    def __init__(self, length):
+        self.width = length
+        self.height = length
+        
+
+    # This will be shown when object is accessed via print()    
+    def __str__(self):
+        to_print = "Square(side=" + str(self.width) + ")"
+        return to_print
+    
+    # This will be shown when object is executed in command line
+    def __repr__(self):
+        to_display = "Square(side=" + str(self.width) + ")"
+        return to_display
+    
+    def set_side(self, new_length):
+        self.width = new_length
+        self.height = new_length
+        
+
+    def set_width(self, new_length):
+        self.width = new_length
+        self.height = new_length
+    
+    
+    def set_height(self, new_length):
+        self.width = new_length
+        self.height = new_length
