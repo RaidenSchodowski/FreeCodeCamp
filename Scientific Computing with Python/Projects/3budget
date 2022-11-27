@@ -1,0 +1,172 @@
+class Category:
+    
+    
+    def __init__(self, cat_name):
+        self.cat_name = cat_name
+        self.ledger = []
+        
+    # Function that prints out object
+    def __str__(self):
+        # Print First Line
+        star_l = int((30 - len(self.cat_name))/2)
+        star_r = 30 - star_l - len(self.cat_name)
+        line1 = '*' * star_l + self.cat_name + '*' * star_r + "\n"
+        
+        # Print Ledger
+        ledger_n = ""
+        for entry in self.ledger:
+            # Convert Amount to String
+            amt_str = str(entry.get('amount'))
+            dot_pos = amt_str.find(".") 
+            amt_len = len(amt_str)
+            if dot_pos == -1:
+                amt_str = amt_str + ".00"
+            else:
+                amt_str = amt_str + "0" * (3 - (amt_len-dot_pos))
+            
+            # Fill in the gap
+            des_str = entry.get('description')
+            des_len = len(des_str)
+            gap_len = 30 - len(amt_str) - des_len
+            if gap_len < 1:
+                gap_len = 1
+            
+            # Check if Assembled string ledger do not exceed 30 chars
+            ledger_len = len(des_str + ' ' * gap_len + amt_str)
+            if ledger_len > 30:
+                dif_des_str = ledger_len - 30
+                mod_des_str = des_str[:-dif_des_str]
+                ledger_n = ledger_n + mod_des_str + ' ' * gap_len + amt_str + '\n'
+            else:
+                ledger_n = ledger_n + des_str + ' ' * gap_len + amt_str + '\n'
+            # Assemble string ledger           
+            
+        
+        # Print Total Amount
+        amt_total = "Total: " + str(self.get_balance())
+        
+        #Print Ledger
+        tot_ledger = line1 + ledger_n + amt_total
+        
+        return tot_ledger
+    
+    def deposit(self, amount, description = ""):
+        self.ledger.append({"amount": amount, "description": description})
+        return None
+    
+    
+    def withdraw(self, amount, description = ""):
+
+        # If available founds are sufficient withdraw amount
+        if self.check_funds(amount):
+            self.ledger.append({"amount": -1 * amount, "description": description})
+            success = True
+        else:
+            success = False
+        
+        return success
+    
+    
+    def get_balance(self):
+        av_found = 0
+        for entry in self.ledger:
+            av_found += entry['amount']
+        
+        return av_found
+    
+    
+    def transfer(self, amount, dest_cat):
+        
+        # If founds are available:
+        if self.check_funds(amount):
+            self.ledger.append({"amount": -1 * amount, "description": "Transfer to " + dest_cat.cat_name})
+            getattr(dest_cat, "ledger").append({"amount": amount, "description": "Transfer from " + self.cat_name})
+            success = True
+        else:
+            success = False
+        
+        return success
+    
+    def check_funds(self, amount):
+        # Check available founds
+        av_found = 0
+        for entry in self.ledger:
+            av_found += entry['amount']
+        
+        if av_found >= amount:
+            success = True
+        else:
+            success = False
+                
+        return success
+
+
+def create_spend_chart(categories):
+    
+    
+    # Collect withdraw data
+    withdraw_cat = []
+    for cat in categories:
+        withdraw = 0
+        for entry in cat.ledger:
+            if entry['amount'] < 0:
+                withdraw += entry['amount']
+        withdraw_cat.append({"Name" : cat.cat_name, "Withdraw" : withdraw})
+       
+    
+    # Copmute participation of each category in the total withdraw
+    combined_withdraw = 0
+    for cat in withdraw_cat:
+        combined_withdraw += cat['Withdraw']
+    
+    cat_ratio = []
+    for cat in withdraw_cat:
+        cat_r = round(int(cat['Withdraw'] / combined_withdraw * 10) * 10, -1) 
+        cat_ratio.append({"Name" : cat["Name"], "Ratio" : cat_r})
+
+        
+    # Print Plot with participation of each category
+    no_cat = len(categories)
+    cat_name_max_len = 0
+    for cat in categories:
+        if len(cat.cat_name) > cat_name_max_len:
+            cat_name_max_len = len(cat.cat_name)
+    
+    head = "Percentage spent by category\n"
+    x_ax = '    ' + '---' *  no_cat + '-\n'
+    y_ax = ['100|',' 90|',' 80|',' 70|',' 60|',' 50|',' 40|',' 30|',' 20|',' 10|','  0|']
+    
+    plt_row = ""
+    for i, val in enumerate(y_ax):
+        current_val = (len(y_ax)-1-i)*10
+        
+        current_row = val
+        for col in range(no_cat):
+            if cat_ratio[col]['Ratio'] < current_val:
+                current_row += '   '
+            else:
+                current_row += ' o '
+            
+        plt_row += current_row + " \n"
+    
+    
+    # Print category labels
+    legend_assy = ""
+    for i in range(cat_name_max_len):
+        legend_row = ""
+        for col in range(no_cat):
+            if len(cat_ratio[col]['Name']) > i:
+                legend_row += ' ' +cat_ratio[col]['Name'][i] + ' '
+            else:
+                legend_row += '   '
+        
+        if i != cat_name_max_len - 1:
+            legend_assy += '    ' + legend_row + ' \n'
+        else: 
+            legend_assy += '    ' + legend_row + ' '
+                
+    # Assembly header with plot and x axis labels
+    plt_assy = head + plt_row + x_ax + legend_assy
+    
+    
+    return plt_assy

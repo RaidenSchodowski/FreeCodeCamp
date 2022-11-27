@@ -1,0 +1,66 @@
+import copy
+import random
+# Consider using the modules imported above.
+
+class Hat:
+    
+    def __init__(self, **kwargs):
+        self.contents = []
+        
+        self.basket = dict()
+        self.basket.update(kwargs)
+        print(self.basket)
+    
+        
+        # Add to contents
+        for k, v in self.basket.items():
+            for i in range(v):
+                self.contents.append(k)
+                
+    def print_content(self):
+        print(self.contents)
+    
+    # Draw method
+    def draw(self, ball_no):
+        balls_drawn = []
+        flag = 0
+        for i in range(ball_no):
+            if self.contents:
+                rm_item = random.randrange(len(self.contents))
+                balls_drawn.append(self.contents[rm_item])
+                self.contents.pop(rm_item)
+            elif not flag == 1:
+                flag =1
+                print("Number of draws exceeds number of balls in the basket. Therefore all balls are returned.")
+                
+        
+                
+        return balls_drawn   
+
+
+def experiment(hat, expected_balls, num_balls_drawn, num_experiments):
+    
+    # Set ball_count
+    ball_count = expected_balls.copy()
+    for k, v in ball_count.items():
+        ball_count[k] = 0
+
+    #Perform experiment
+    m = 0 # Set counter of successful experiments to zero
+    for exp in range(num_experiments):
+        hat_dcopy = copy.deepcopy(hat)
+        drawn_balls = hat_dcopy.draw(num_balls_drawn)
+        # Count balls in the experiment
+        for k, v in ball_count.items():
+            ball_count[k] = drawn_balls.count(k)
+        
+        # Check if experiment was successful or not
+        diffkeys = [k for k in ball_count if ball_count[k] >= expected_balls[k]]
+        if len(diffkeys) == len(ball_count):
+            m += 1
+            
+                
+        
+    probability = m/num_experiments
+    print(probability)
+    return probability
