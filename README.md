@@ -12,7 +12,7 @@ Each of these 30 projects in the freeCodeCamp.org curriculum has its own agile u
    Certifications with my completion status and progess:
 
 
- ### **Scientific Computing with Python** ✖️
+ ### **Scientific Computing with Python** 
 
 * [x] Python for Everybody
 * [x] Project 1: Arithmetic Formatter
