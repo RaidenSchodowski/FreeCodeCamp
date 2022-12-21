@@ -7,7 +7,7 @@ class Hat:
     def __init__(self, **kwargs):
         self.contents = []
         
-        self.basket = dict()
+        self.basket = dict() 
         self.basket.update(kwargs)
         print(self.basket)
     
