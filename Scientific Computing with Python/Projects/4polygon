@@ -6,7 +6,7 @@ class Rectangle:
         self.height = height
         
     # This will be shown when object is accessed via print()    
-    def __str__(self):
+    def __str__(self): 
         to_print = "Rectangle(width=" + str(self.width) + ", height=" + str(self.height) + ")"
         return to_print
     
