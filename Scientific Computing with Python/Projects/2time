@@ -5,7 +5,7 @@ def proc_start(start):
   x.extend(x[1])
   del x[1]
     
-  if x[2] == "PM":
+  if x[2] == "PM": 
     hr = 12+int(x[0])
   else:
     hr = int(x[0])
