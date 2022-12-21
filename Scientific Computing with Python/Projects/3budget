@@ -10,7 +10,7 @@ class Category:
         # Print First Line
         star_l = int((30 - len(self.cat_name))/2)
         star_r = 30 - star_l - len(self.cat_name)
-        line1 = '*' * star_l + self.cat_name + '*' * star_r + "\n"
+        line1 = '*' * star_l + self.cat_name + '*' * star_r + "\n" 
         
         # Print Ledger
         ledger_n = ""
