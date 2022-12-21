@@ -31,13 +31,3 @@ Each of these 30 projects in the freeCodeCamp.org curriculum has its own agile u
 * [ ] Project 3: Medical Data Visualizer
 * [ ] Project 4: Page View Time Series Visualizer
 * [ ] Project 5: Sea Level Predictor
-
- ### **Machine Learning with Python** ✖️
-
-* [ ] Tensorflow
-* [ ] How Neural Networks Work
-* [ ] Project 1: Rock Paper Scissors
-* [ ] Project 2: Cat and Dog Image Classifier
-* [ ] Project 3: Book Recommendation Engine using KNN
-* [ ] Project 4: Linear Regression Health Costs Calculator
-* [ ] Project 5: Neural Network SMS Text Classifier
