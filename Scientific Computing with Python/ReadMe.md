@@ -106,3 +106,4 @@ Sqlserver Very nice, from microsoft
 HSQL, SQLite, Postgress, etc are all smaller projects that are free and open source
 ```
 52. [SQL code](https://www.py4e.com/lectures3/Pythonlearn-15-Database-Handout.txt)
+ 
