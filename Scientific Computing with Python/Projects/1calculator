@@ -62,3 +62,4 @@ def arithmetic_arranger(problems: List[str], calculate_solution: bool = False) -
         arranged_problems: str = top_row + "\n" + bot_row + "\n" + spacers
 
     return arranged_problems
+ 
